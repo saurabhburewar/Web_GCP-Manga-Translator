@@ -1,0 +1,1 @@
+# Web_GCP-Manga-Translator
