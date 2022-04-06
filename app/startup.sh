@@ -5,7 +5,7 @@ apt-get install -yq git supervisor python python-pip python3-distutils
 pip install --upgrade pip virtualenv
 
 export HOME=/root
-git clone https://github.com/saurabhburewar/Web_GCP-Manga-Translator 
+git clone https://github.com/saurabhburewar/Web_GCP-Manga-Translator /app
 
 sudo bash /app/add-google-cloud-ops-agent-repo.sh --also-install
 
