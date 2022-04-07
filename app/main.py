@@ -25,7 +25,7 @@ def get_img():
             print("File uploaded")
 
             print("Waiting for translations...")
-            time.sleep(5)
+            time.sleep(10)
 
             out_bucket = "sde-texts"
             bucket2 = st_client1.get_bucket(out_bucket)
