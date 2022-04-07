@@ -20,7 +20,7 @@ def get_img():
             blob1 = bucket1.blob(file.filename)
             blob1.content_type = "image/jpeg"
 
-            print("Uploading to {} in {}".format(file, in_bucket))
+            print("Uploading to {} in {}".format(file.filename, in_bucket))
             blob1.upload_from_file(file)
             print("File uploaded")
 
