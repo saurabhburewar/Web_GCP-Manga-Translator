@@ -33,7 +33,9 @@ def get_img():
 
             resp = blob2.download_as_string()
             resp = resp.decode('utf-8')
-
+            
+            print("Response sent")
+            
             return json.dumps(resp)
 
     return '''
