@@ -11,7 +11,7 @@
     ocr-translate => Trigger is 'translation-reqs' topic. Start point will be 'translate'
     ocr-save =>  Trigger is 'translation-results' topic. Start point will be 'save'
 
-- Open project in cloud shell in the console
+- Open project in cloud shell in the console. Enter the following commands in the shell
 
 ```
 git clone https://github.com/saurabhburewar/Web_GCP-Manga-Translator
@@ -23,14 +23,15 @@ cd app
 pip3 install -r requirements.txt --user
 
 pip3 install gunicorn --user
-
-~/.local/bin/gunicorn -b :8080 main:app
 ```
 
 This will run the application in the cloud shell. Use web preview on port 8080 to view the webpage.
+```
+~/.local/bin/gunicorn -b :8080 main:app
+```
 
-6. Create instance 
-
+- Create instance 
+```
 gcloud compute instances create sde-instance1 \
     --image-family=debian-10 \
     --image-project=debian-cloud \
@@ -39,9 +40,10 @@ gcloud compute instances create sde-instance1 \
     --metadata-from-file startup-script=startup.sh \
     --zone us-central1-a \
     --tags http-server
-
+```
+```
 gcloud compute instances get-serial-port-output sde-instance1 --zone us-central1-a
-
+```
 7. Create Firewall rules 
 
 gcloud compute firewall-rules create default-allow-http-8080 \
