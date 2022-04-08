@@ -2,24 +2,28 @@
 
 ## Application
 
-1. Create project on GCP
-2. Enable required APIs (can be done as we go along)
-3. Create cloud storage buckets in the console
-4. Create functions in the cloud functions section in the console. Use the code in the 'functions' directory in the github repository for all three functions.
+- Create project on GCP
+- Enable required APIs (can be done as we go along)
+- Create cloud storage buckets in the console
+- Create functions in the cloud functions section in the console. Use the code in the 'functions' directory in the github repository for all three functions.
     
     ocr-extract => Trigger is 'sde-mangas' bucket. Start point will be 'process_img'
     ocr-translate => Trigger is 'translation-reqs' topic. Start point will be 'translate'
     ocr-save =>  Trigger is 'translation-results' topic. Start point will be 'save'
 
-5. Open project in cloud shell in the console
+- Open project in cloud shell in the console
 
 ```
 git clone https://github.com/saurabhburewar/Web_GCP-Manga-Translator
 
 cd Web_GCP-Manga-Translator
+
 cd app
+
 pip3 install -r requirements.txt --user
+
 pip3 install gunicorn --user
+
 ~/.local/bin/gunicorn -b :8080 main:app
 ```
 
