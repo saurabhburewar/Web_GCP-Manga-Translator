@@ -29,7 +29,7 @@ pip3 install -r requirements.txt --user
 pip3 install gunicorn --user
 ```
 
-- This will run the application in the cloud shell. Use web preview on port 8080 to view the webpage.
+- The following will run the application in the cloud shell. Use web preview on port 8080 to view the webpage.
 ```
 ~/.local/bin/gunicorn -b :8080 main:app
 ```
@@ -78,4 +78,4 @@ gcloud compute firewall-rules create default-allow-http-8080 \
 Demo - https://youtu.be/7xOWBCW6QCk
 
 ## Report
-
+Read full report [here](https://github.com/saurabhburewar/Web_GCP-Manga-Translator/blob/main/Report.pdf).
